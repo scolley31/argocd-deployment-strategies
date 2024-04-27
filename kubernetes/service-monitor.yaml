@@ -8,7 +8,7 @@ spec:
   endpoints:
     - interval: 5s
       port: http
-      path: /actuator/prometheus
+      path: /color
   namespaceSelector:
     matchNames:
       - default
