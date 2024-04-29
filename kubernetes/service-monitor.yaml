@@ -7,8 +7,8 @@ metadata:
 spec:
   endpoints:
     - interval: 5s
-      port: http
-      path: /color
+      port: metrics
+      path: /metrics
   namespaceSelector:
     matchNames:
       - default
