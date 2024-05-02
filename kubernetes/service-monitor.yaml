@@ -11,7 +11,7 @@ spec:
       path: /metrics
   namespaceSelector:
     matchNames:
-      - default
+      - argo-rollouts
   selector:
     matchLabels:
       app.kubernetes.io/name: argo-rollouts-metrics
