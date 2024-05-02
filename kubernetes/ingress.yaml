@@ -11,14 +11,14 @@ spec:
     - host: rollouts-bluegreen.local
       http:
         paths:
-          - path: /active
+          - path: /active/
             pathType: Prefix
             backend:
               service:
                 name: rollout-bluegreen-active
                 port:
                   number: 80
-          - path: /preview
+          - path: /preview/
             pathType: Prefix
             backend:
               service:
