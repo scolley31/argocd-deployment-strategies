@@ -11,11 +11,17 @@ spec:
     - host: rollouts-bluegreen.local
       http:
         paths:
-          - path: /
+          - path: /active
             pathType: Prefix
             backend:
               service:
-                # Reference to a Service name, also specified in the Rollout spec.strategy.canary.stableService field
-                name: rollout-bluegreen-active # rollout-bluegreen-active、  rollout-bluegreen-preview
+                name: rollout-bluegreen-active
+                port:
+                  number: 80
+          - path: /preview
+            pathType: Prefix
+            backend:
+              service:
+                name: rollout-bluegreen-preview
                 port:
                   number: 80
