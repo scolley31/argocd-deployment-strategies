@@ -1,7 +1,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: app-service-monitor
+  name: argo-rollouts-metrics
   labels:
     release: kube-prometheus-stack
 spec:
@@ -14,4 +14,4 @@ spec:
       - default
   selector:
     matchLabels:
-      app: rollout-bluegreen-active
+      app.kubernetes.io/name: argo-rollouts-metrics
